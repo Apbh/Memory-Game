@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name":"Kitten",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-2.jpg",
+        "clicked": false
+
+    },
+    {
+        "id": 2,
+        "name":"Baby Chameleon",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-12.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "name":"Baby Donkey",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-11.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "name":"Duckling",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-31.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "name":"Baby Deer",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-7.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "name":"Baby Walrus",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-16.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "name":"Baby Hedgehog",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-13.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "name":"Puppy",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-10.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "name":"Baby Panda",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-36.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "name":"Baby Puffer Fish",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-8.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "name":"Bunny",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-9.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "name":"Baby Pig",
+        "image":"https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals-2/cute-baby-animals-2-6.jpg",
+        "clicked": false
+    }
+]
