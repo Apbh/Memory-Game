@@ -32,30 +32,29 @@ class App extends Component {
       
       });
       this.handleScore();
-      // this.handleShuffle();
     } else{
-      // this.setState({correctOrNot:"SHIH-TZU, you guessed incorrectly!"})
       this.handleGameReset();
     }
   };
 
   handleScore = () => {
-    const score = this.state.score + 1;
+    const addScore = this.state.score + 1;
     this.setState({
-      topScore:score,
+      score:addScore,
     })
     
-    if (this.state.score < 12){
+     if (addScore >= this.state.topScore){
       this.setState({
-        score:score,
-        // topScore:this.state.score,
+        topScore:addScore
       })
     }
-    else if (this.state.score === 12){
+    else if (this.state.addScore === 12){
       this.setState({
-        correctOrNot: "You Win!"
+        correctOrNot: "You Win!",
+        topScore:this.state.addScore,
+        score:0
       });
-      this.handleGameReset();
+      // this.handleGameReset();
     }
     this.handleShuffle();
 
@@ -71,8 +70,7 @@ class App extends Component {
     this.setState({
       babyanimals,
       score:0,
-      topScore: this.state.score,
-      correctOrNot:"SHIH-TZU, that's incorrect!",
+      correctOrNot:"Oops, that's incorrect!",
       clicked: [],
       
     })
@@ -89,7 +87,7 @@ class App extends Component {
       correctOrNot={this.state.correctOrNot}
       topScore = {this.state.topScore}
       />
-      <Title>Test your memory with this game! Click on each of the images only once and score a point! Click twice, and its back to the start. Noone said building memory was easy.
+      <Title>Test your memory with this game! Click on each of the images only once and score a point! Click twice, and its back to the start.Noone said memory building was easy.
       </Title>
 
       <Container>

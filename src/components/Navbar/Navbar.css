@@ -1,5 +1,5 @@
 .navbar{
-background: #5133a4;
+background:orangered;
 height:90px;
 /* min-height: 70px; */
 position: fixed;
@@ -16,17 +16,25 @@ white-space: nowrap;
     color:white;
 }
 
+.logo,.correctOrNot,.score{
+    font-family: 'Butterfly Kids', cursive;
+    font-size:40px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
 
 .navbar ul{
     display:block;
-    /* margin: 0; */
-    /* padding: 0; */
+    width:70%;
+ 
+   
 }
 
 .navbar li{
     display: inline-block;
     /* padding: 26px 0; */
-    margin:50px;
+    margin:60px;
     width: 33.3%;
     text-align: center;
 }

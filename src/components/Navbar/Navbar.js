@@ -10,19 +10,9 @@ const Navbar = props => (
             </li>
             <li className="correctOrNot">{props.correctOrNot}
             </li>
-            <li className="score">Score: {props.score} | Top Score: {props.topScore}</li>
+            <li className="score">Score: {props.score} , Top Score: {props.topScore}</li>
         </ul>
     </nav>
-    // <nav className="navbar-fixed">
-
-    //         <div className="nav-wrapper container">
-    //             <a href="/" className="logo left">Oh, Baby!</a>
-    //             <ul className="right" style={{listStyleType:"none"}}>
-    //                 <li>Score: {props.score} | Top Score: {props.topScore}</li>
-    //             </ul>
-    //         </div>
-    //     </nav>
-
 
 )
 
