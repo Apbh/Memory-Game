@@ -6,7 +6,7 @@ import Title from "./components/Title";
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import babyanimals from "./babyanimals.json";
-import { Container, Row, Col } from 'react-grid-system';
+import { Container, Row } from 'react-grid-system';
 
 function shuffleCards(array){
   for (let i = array.length - 1; i > 0; i--) {
@@ -43,15 +43,17 @@ class App extends Component {
       score:addScore,
     })
     
-     if (addScore >= this.state.topScore){
+     if (addScore < 12 && addScore >= this.state.topScore){
+       console.log("score is:" + addScore);
       this.setState({
         topScore:addScore
       })
     }
-    else if (this.state.addScore === 12){
+    else if (addScore === 12){
+      console.log(addScore);
       this.setState({
         correctOrNot: "You Win!",
-        topScore:this.state.addScore,
+        topScore:3,
         score:0
       });
       // this.handleGameReset();
@@ -93,7 +95,7 @@ class App extends Component {
       <Container>
           <Row>
             {this.state.babyanimals.map(baby => (
-              <Col sm={3}>
+              // <Col sm={3}>
                 <Cards
                   id={baby.id}
                   key={baby.id}
@@ -104,7 +106,7 @@ class App extends Component {
                   handleGameReset={this.handleGameReset}
             
                 />
-              </Col>
+              /* </Col> */
             ))}
             
           </Row>
