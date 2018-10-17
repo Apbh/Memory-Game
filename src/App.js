@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 import Cards from "./components/Cards";
 import Title from "./components/Title";
@@ -24,78 +23,95 @@ class App extends Component {
     correctOrNot: ""
 
   };
+
   handleClickEvent = (id) => {
     if (this.state.clicked.indexOf(id) === -1){
+      this.handleScore();
       this.setState({
         clicked:this.state.clicked.concat(id),
-        correctOrNot:"Good Memory!"
-      
+        
       });
-      this.handleScore();
     } else{
-      this.handleGameReset();
-    }
-  };
-
-  handleScore = () => {
-    const addScore = this.state.score + 1;
-    this.setState({
-      score:addScore,
-    })
+      this.setState({
+          correctOrNot: "Oops, that's incorrect!",
+        })
+        this.handleGameReset();
+      }
+      this.handleShuffle();
+    };
     
-     if (addScore < 12 && addScore >= this.state.topScore){
-       console.log("score is:" + addScore);
+    handleScore = () => {
+      const addScore = this.state.score + 1;
       this.setState({
-        topScore:addScore
+        score:addScore,
+        correctOrNot:"Good Memory!"
       })
-    }
-    else if (addScore === 12){
-      console.log(addScore);
+      
+      if (addScore < 12 && addScore >= this.state.topScore){
+        console.log("score is:" + addScore);
+        this.setState({
+          topScore:addScore,
+        })
+      }
+     if (addScore === 12){
       this.setState({
-        correctOrNot: "You Win!",
-        topScore:3,
-        score:0
+        score:this.state.score,
+        topScore:4,
+        clicked:this.state.clicked
+    
+      }, function(){
+        this.handleWin();
+        this.setState({
+          score:0,
+          topScore:0,
+          clicked:[]
+        })
       });
-      // this.handleGameReset();
     }
-    this.handleShuffle();
-
+    console.log(this.state.clicked);
   }
-
-  handleShuffle = () => {
-    let cardShuffle = shuffleCards(babyanimals);
-    this.setState({babyanimals: cardShuffle});
-  };
-
-
+  
+  
+  
   handleGameReset = () => {
+    console.log(this.state.topScore);
     this.setState({
       babyanimals,
-      score:0,
-      correctOrNot:"Oops, that's incorrect!",
       clicked: [],
+      score:0,
       
     })
     this.handleShuffle();
   }
 
+  handleWin = () => {
+    this.setState({
+      correctOrNot: "Winner! Click a card to replay.",
+    })
+  }
+  
+  
+    handleShuffle = () => {
+      let cardShuffle = shuffleCards(babyanimals);
+      this.setState({babyanimals: cardShuffle});
+    };
 
   render() {
     return (
-    //  <div className= "container-fluid">
+  
       <Wrapper>
       <Navbar
       score= {this.state.score}
       correctOrNot={this.state.correctOrNot}
       topScore = {this.state.topScore}
       />
-      <Title>Test your memory with this game! Click on each of the images only once and score a point! Click twice, and its back to the start.Noone said memory building was easy.
+      <Title>Test your memory with this game! Click on each of the images only once and score a point! Click twice, and your score resets to 0. To win, you must guess all <span className='twelve'>12 cards</span> once. Noone said memory building was easy.
       </Title>
 
       <Container>
           <Row>
             {this.state.babyanimals.map(baby => (
-              // <Col sm={3}>
+              
                 <Cards
                   id={baby.id}
                   key={baby.id}
@@ -106,13 +122,12 @@ class App extends Component {
                   handleGameReset={this.handleGameReset}
             
                 />
-              /* </Col> */
             ))}
             
           </Row>
       </Container>
       </Wrapper>
-    //  </div>
+  
 
     );
   }

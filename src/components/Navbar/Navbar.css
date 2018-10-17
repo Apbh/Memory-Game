@@ -1,7 +1,6 @@
 .navbar{
 background:orangered;
 height:90px;
-/* min-height: 70px; */
 position: fixed;
 width: 100%;
 -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
@@ -33,7 +32,6 @@ white-space: nowrap;
 
 .navbar li{
     display: inline-block;
-    /* padding: 26px 0; */
     margin:60px;
     width: 33.3%;
     text-align: center;
