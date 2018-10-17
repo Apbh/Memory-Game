@@ -105,7 +105,7 @@ class App extends Component {
       correctOrNot={this.state.correctOrNot}
       topScore = {this.state.topScore}
       />
-      <Title>Test your memory with this game! Click on each of the cards below only once and score a point! Click twice, and your score resets to 0. To win, you must click on all <span className='twelve'>12 cards</span> once. Noone said memory building was easy.
+      <Title>Test your memory with this game! Click on a card below only once and score a point! Click twice, and your score resets to 0. To win, you must click on all 12 cards once. Noone said memory building was easy.
       </Title>
 
       <Container>
